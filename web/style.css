@@ -1,0 +1,183 @@
+/* Establece valores iniciales para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    box-sizing: border-box; /* Agregado para incluir el padding y border en el tamaño total */
+}
+
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: white;
+    background-color: #1a1a1a; /* Agregado para un fondo de la página */
+    background-image: url(img/fondo.jpg);
+}
+
+/* Estilos para el contenido principal */
+.content {
+    padding: 50px;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 800px;
+    background-color: #333; /* Agregado para un fondo de contenido */
+}
+
+/* Estilos para la cabecera fija en la parte superior */
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 63px;
+    background: #171717;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+/* Estilos para los títulos */
+.title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Cambia el estilo del enlace al pasar el cursor por encima */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el logotipo */
+/* Estilos para el logotipo */
+.logo {
+    margin: 30px;
+    opacity: 0; /* Inicialmente invisible */
+    transform: translateY(-20px); /* Desplaza hacia arriba */
+    animation: slideIn 2s ease-in-out forwards; /* Agregado para la animación de deslizamiento */
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Estilos para los enlaces dentro del logotipo */
+.logo a {
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Estilos para los enlaces en la barra de navegación */
+.navbar a {
+    text-decoration: none;
+    color: white;
+    margin: 0 20px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Agregado para las animaciones de cambio de color y fondo */
+    padding: 10px 20px; /* Agregado para el espaciado interno del botón */
+    border-radius: 20px; /* Agregado para hacer los botones redondeados */
+}
+
+.navbar a:hover {
+    background: #3f3f3f;
+    color: purple;
+}
+
+
+
+/* Estilos para el encabezado principal con imagen de fondo */
+.header {
+    height: 60vh !important;
+    background: url(img/inicio.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilos para el título en el encabezado principal */
+.title {
+    margin-bottom: 40px;
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+}
+
+/* Estilos para el contenido principal */
+.content {
+    height: auto;
+}
+
+/* Estilos para una sección específica del contenido */
+.sau {
+    padding: 80px;
+    background: #1f1d1d;
+    color: white; /* Agregado para el color del texto */
+}
+
+/* Estilos para el contenedor de cajas */
+.box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 40px; /* Agregado para separar del contenido anterior */
+}
+
+/* Estilos para cada caja en el contenedor */
+.box-container .box {
+    flex: 1; /* Distribución equitativa de las cajas */
+    max-width: 300px; /* Limitar el ancho de las cajas */
+    background: #101010;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem 0.5rem rgba(0, 0, 0, .5);
+    margin: 1rem;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el ícono dentro de cada caja */
+.box-container .box i {
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+    background: purple;
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+/* Estilos para el título de cada caja */
+.box-container .box h3 {
+    font-size: 15px;
+    color: purple;
+    margin-top: 10px; /* Espacio entre el ícono y el título */
+}
+
+/* Estilos para el párrafo dentro de cada caja */
+.box-container .box p {
+    padding: 10px 0;
+    font-size: 16px;
+    flex-grow: 1; /* El párrafo ocupa todo el espacio disponible */
+}
